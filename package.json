@@ -1,0 +1,19 @@
+{
+  "name": "sample-angular-node",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "ejs": "~0.8.5",
+    "express": "~4.2.0",
+    "qs": "*",
+    "request": "^2.85.0"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
