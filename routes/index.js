@@ -56,9 +56,11 @@ router.get('/restaurentAdmin', function(req, res) {
 
    request(options,function(e,r,b){
    	
+      bearerOptions['uri']='/restaurent';
    		bearerOptions['auth']['bearer']=b.access_token;
-
+      console.log(bearerOptions);
    		request(bearerOptions,function(e,r,b){
+        console.log(b);
    			res.setHeader('Content-Type', 'application/json');
   			res.send(b);
    		})

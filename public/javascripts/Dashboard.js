@@ -77,6 +77,8 @@ app.controller('Dashboard', function($scope, $resource, $timeout,$http,$window) 
 
     $scope.getAdminView=function(){
         $http.get("/restaurentAdmin").then(function(response){
+            console.log("HI");
+            
             $scope.restaurentListWithEdit=response.data;
             $scope.restaurentList=[]
             console.log(response);
