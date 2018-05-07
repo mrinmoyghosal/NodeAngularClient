@@ -41,11 +41,12 @@
 		      	</div>
 
 		      	<div ng-repeat="restaurent in restaurentListWithEdit" style="border-style: solid;margin-bottom:5px">
+		      		<div style="margin:5px;font-style:italic;" ng-if="$index==0">Click on Blue Links to Update Model ValueThen Click Update button <hr/></div>
 		      		<div>Name of Restaurent - <edit-in-place value="restaurent.Name"></edit-in-place></div>
 		      		<div>Address - <edit-in-place value="restaurent.Address"></edit-in-place></div>
 		      		<div>Open from <edit-in-place value="restaurent.routine.open"></edit-in-place> to <edit-in-place value="restaurent.routine.close"></edit-in-place></div>
 		      		
-		      		<button class="btn btn-default" type="button" ng-click="editRestaurent(restaurent._id.$oid,$index)">Edit</button>
+		      		<button class="btn btn-default" type="button" ng-click="editRestaurent(restaurent._id.$oid,$index)">Update</button>
 		      	</div>
    		</div>
 		</div>

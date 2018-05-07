@@ -25,6 +25,7 @@ var options={
         }
       }
 
+
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Angular + Node - OAuth Client Credential Grant Example ' });
@@ -74,9 +75,12 @@ router.get('/restaurentUpdate', function(req, res) {
 
    request(options,function(e,r,b){
    	
+      bearerOptions['uri']='/restaurentUpdate';
+      bearerOptions['qs']={id:req.query.id,Name:req.query.Name,Address:req.query.Address,open:req.query.open,close:req.query.close};
    		bearerOptions['auth']['bearer']=b.access_token;
 
    		request(bearerOptions,function(e,r,b){
+        console.log(b);
    			res.setHeader('Content-Type', 'application/json');
   			res.send(b);
    		})

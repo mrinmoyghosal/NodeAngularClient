@@ -38,7 +38,7 @@ app.directive( 'editInPlace', function() {
   };
 });
 
-app.controller('Dashboard', function($scope, $resource, $timeout,$http) {
+app.controller('Dashboard', function($scope, $resource, $timeout,$http,$window) {
 
     /**
      * init controller and set defaults
@@ -60,6 +60,9 @@ app.controller('Dashboard', function($scope, $resource, $timeout,$http) {
 
         $http.get("/restaurentUpdate?id="+id+"&Name="+item.Name+"&Address="+item.Address+"&open="+item.routine.open+"&close="+item.routine.close).then(function(response){
           console.log(response);
+         if(response.data.message=="Successful"){
+          $window.alert("Document Update Successful");
+         }
         })
 
     }
