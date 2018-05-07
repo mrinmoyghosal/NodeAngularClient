@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "ejs": "~0.8.5",
+    "ejs": "2.5.5",
     "express": "~4.2.0",
     "qs": "*",
     "request": "^2.85.0"
